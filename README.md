@@ -1,7 +1,7 @@
 Soma FM "Now Playing" on Panic's Status Board
 ============================
 
-![Soma FM on Status Board - Screenshot](http://somafm.prayingmadness.com/images/screenshot.png)
+![Soma FM on Status Board - Screenshot](http://somafm.prayingmadness.com/images/screencap.png)
 
 Initial stab at a <a href="http://somafm.com">Soma FM</a> "Now Playing" panel for Panic's <a href="http://panic.com/statusboard">Status Board</a>.
 
@@ -19,4 +19,4 @@ Knocked together over the course of an evening, so there's definitely room for i
 - Tune into Soma FM and listen to fantastic music
 - Send Soma FM a donation ;)
 
-- Alternately, if you're viewing this page on your iPad, simply <a href="panicboard://?url=http://somafm.prayingmadness.com&panel=diy">click here to install automatically</a>.
+- Alternately, if you're viewing this page on your iPad, simply <a href="panicboard://?url=http%3A%2F%2Fsomafm.prayingmadness.com&panel=diy">tap here to install automatically</a>.
