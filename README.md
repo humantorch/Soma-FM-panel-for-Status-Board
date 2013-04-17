@@ -15,6 +15,6 @@ Knocked together over the course of an evening, so there's definitely room for i
 ## Installation
 -----
 - Add a new DIY HTML panel to Statusbaord
-- Set http://prayingmadness.com/somafm as the source URL
+- Set http://somafm.prayingmadness.com as the source URL
 - Tune into Soma FM and listen to fantastic music
 - Send Soma FM a donation ;)
