@@ -8,9 +8,6 @@ SOMA.Global = (function (window, document, undefined) {
 
         "init": function() {
             // Change page background to black if the URL contains "?desktop", for debugging while developing on your computer
-
-            // var station = $("select").val();
-
             if (document.location.href.indexOf('desktop') > -1) {
                 $('#somaContainer').addClass('desktop');
             }
@@ -21,10 +18,7 @@ SOMA.Global = (function (window, document, undefined) {
             /* event handlers */
             $("select").one('change', function(event) {
                 event.preventDefault();
-                // Act on the event
                 self.poll($(this).val());
-                // window.clearInterval(timer);
-                // timer = window.setInterval(function() {self.poll($("select").val());}, 15000);
             });
 
             var timer = window.setInterval(function() {self.poll($("select").val());}, 15000);
