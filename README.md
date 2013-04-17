@@ -18,3 +18,5 @@ Knocked together over the course of an evening, so there's definitely room for i
 - Set http://prayingmadness.com/somafm as the source URL
 - Tune into Soma FM and listen to fantastic music
 - Send Soma FM a donation ;)
+
+- Alternately, if you're viewing this page on your iPad, simply <a href="panicboard://?url=http://somafm.prayingmadness.com&panel=diy">click here to install automatically</a>.
