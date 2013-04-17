@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <style type="text/css">
+      @font-face{
+        font-family: "Roadgeek2005SeriesD";
+        src: url("http://panic.com/fonts/Roadgeek 2005 Series D/Roadgeek 2005 Series D.otf");
+      }
+      
+      body, * {
+      
+      }
+      body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+        margin: 0;
+        padding: 0;
+      }
+        
+      fieldset,img { 
+        border: 0;
+      }
+      
+      html, body, #main {
+        overflow: hidden; /* */
+      }
+      
+      body {
+        color: white;
+        font-family: 'Roadgeek2005SeriesD', sans-serif;
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      body, html, #main {
+        background: transparent !important;
+      }
+      
+      #somaContainer {
+        width: 250px;
+        height: 250px;
+        text-align: center;
+        background-size: 250px 187px;
+      }
+      #somaContainer * {
+        font-weight: normal;
+      }
+
+      .desktop {
+        background-color: #000;
+      }
+      
+      h1 {
+        width: 180px;
+        margin: 0px auto;
+        padding-top: 40px;
+        font-size: 16px;
+        color: #7e7e7e;
+        text-transform: uppercase;
+        background: transparent url(images/LogoFP2010.png) center 10px no-repeat;
+      }
+
+      ul {
+        margin: 20px 0;
+        list-style-type: none;
+      }
+
+      li {
+        font-size: 16px;
+        color: #7e7e7e;
+        text-align: left;
+        margin-left: 20px;
+      }
+
+      li span {
+        color: #fff;
+        font-size: 16px;
+        /*max-width: 150px;*/
+      }
+
+      .selectstation {
+        float: left;
+        font: 12px 'Roadgeek2005SeriesD', sans-serif;
+        color: #7e7e7e;
+        line-height: 15px;
+        padding-top: 6px;
+        margin-left: 20px;
+      }
+
+      select {
+        -webkit-appearance: none;
+        color: #fff;
+        border: none;
+        font: 12px 'Roadgeek2005SeriesD', sans-serif;
+        float: left;
+        line-height: 15px;
+        margin-left: 15px;
+        border: 1px #ccc solid;
+        padding-top: 2px;
+      }
+
+      #version {
+        font: 9px 'Roadgeek2005SeriesD', sans-serif;
+        color: #7e7e7e;
+        position: absolute;
+        right: 3px; bottom: 3px;
+      }
+    </style>
+  
+    
+  </head>
+  
+  <body>
+    <div id="main">
+    
+      <div id="somaContainer">
+
+        <h1>now playing</h1>
+        <ul>
+            <li id="title">[title] <span></span></li>
+            <li id="artist">[artist] <span></span></li>
+            <li id="album">[album] <span></span></li>
+        </ul>
+
+        <span class="selectstation">Select a station: </span><select name="station" id="station">
+            <option value="groovesalad" selected>Groove Salad</option>
+            <option value="lush">Lush</option>
+            <option value="dronezone">Drone Zone</option>
+            <option value="folkfwd">Folk Forward</option>          
+            <option value="bagel">BAGeL Radio</option>  
+            <option value="digitalis">Digitalis</option>
+            <option value="indiepop">Indie Pop Rocks!</option>
+            <option value="poptron">PopTron</option>
+            <option value="sonicuniverse">Sonic Universe</option>
+            <option value="covers">Covers</option>
+            <option value="u80s">Underground 80s</option>
+            <option value="secretagent">Secret Agent</option>
+            <option value="suburbsofgoa">Suburbs of Goa</option>
+            <option value="beatblender">Beat Blender</option>
+            <option value="dubstep">Dubstep Beyond</option>
+            <option value="spacestation">Space Station Soma</option>
+            <option value="missioncontrol">Mission Control</option>
+            <option value="bootliquor">Boot Liquor</option>
+            <option value="illstreet">Illinois Street Lounge</option>
+            <option value="thetrip">The Trip</option>
+            <option value="cliqhop">cliqhop idm</option>
+            <option value="doomed">Doomed</option>
+            <option value="brfm">Black Rock FM</option>
+            <option value="sf1033">SF 10-33</option>
+            <option value="sxfm">South by Soma</option>
+        </select>
+      
+      <div id="version">v 0.1b</div>
+      </div><!-- somaContainer -->
+
+    </div><!-- main -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="soma.min.js"></script>
+    <script>
+        $(function() {
+            SOMA.Global.init();
+        });
+    </script>
+  </body>
+</html>
