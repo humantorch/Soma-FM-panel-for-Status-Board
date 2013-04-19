@@ -12,20 +12,25 @@ SOMA.Global = (function (window, document, undefined) {
                 $('#somaContainer').addClass('desktop');
             }
 
+            if (document.location.pathname.indexOf("dev") > -1) {
+                $("h1").append(" - DEV");
+            }
+
             /* ajax call */
             self.poll($("select").val());
 
             /* event handlers */
-            $("select").one('change', function(event) {
+            $("select").on('change', function(event) {
                 event.preventDefault();
                 self.poll($(this).val());
+                _gaq.push(['_trackEvent', 'Station', $(this).val()]);
             });
 
             var timer = window.setInterval(function() {self.poll($("select").val());}, 15000);
         },
 
         "poll": function(station) {
-            console.log("polling");
+            // console.log("polling");
 
             /* variable setup */
             var url = 'proxy.php?url=http%3A%2F%2Fapi.somafm.com%2Fsongs%2F'+station+'.xml',
@@ -46,10 +51,10 @@ SOMA.Global = (function (window, document, undefined) {
                         $album = $nowPlaying.find('album').text(),
                         $datestamp = $nowPlaying.find('date').text();
 
-                    console.log(self.datestamp + " ::: " +$datestamp);
+                    // console.log(self.datestamp + " ::: " +$datestamp);
 
                     if (self.datestamp === "" || self.datestamp !== $datestamp) {
-                        console.log("updating!");
+                        // console.log("updating!");
                         self.datestamp = $datestamp;
                         $album = $album === '' ? '--' : $album;
                         $titleSpan.text($title);
@@ -58,7 +63,7 @@ SOMA.Global = (function (window, document, undefined) {
                     }
                 },
                 complete: function() {
-                    console.log(self.datestamp);
+                    // console.log(self.datestamp);
                 }
             });
         }
